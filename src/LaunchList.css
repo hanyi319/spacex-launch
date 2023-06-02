@@ -1,0 +1,12 @@
+.list-container {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item-container {
+  width: calc(50% - 32px);
+  max-width: 500px;
+  margin-bottom: 32px;
+}

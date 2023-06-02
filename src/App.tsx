@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import LaunchList from "./LaunchList";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [launches, setLaunches] = useState([
+    {
+      id: 1,
+      name: "FALCON 9",
+      title: "FIRST ORBITAL CLASS ROCKET CAPABLE OF REFLIGHT",
+      img: "https://www.spacex.com/static/images/backgrounds/f9_feature.jpg",
+    },
+    {
+      id: 2,
+      name: "FALCON HEAVY",
+      title: "OVER 5 MILLION LBS OF THRUST",
+      img: "https://www.spacex.com/static/images/backgrounds/fh_feature.jpg",
+    },
+    {
+      id: 3,
+      name: "DRAGON",
+      title: "SENDING HUMANS AND CARGO INTO SPACE",
+      img: "https://www.spacex.com/static/images/backgrounds/dragon_feature.jpg",
+    },
+    {
+      id: 4,
+      name: "STARSHIP",
+      title: "SERVICE TO EARTH ORBIT, MOON, MARS AND BEYOND",
+      img: "https://www.spacex.com/vehicles/starship/assets/images/Starhip_website-crop20230126_dji_0199_01.jpg",
+    },
+  ]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="app-container">
+        <LaunchList launches={launches} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
