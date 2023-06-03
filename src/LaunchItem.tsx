@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Card } from "@arco-design/web-react";
+import { Button, Card, Message } from "@arco-design/web-react";
+import { IconInfoCircle, IconSend } from "@arco-design/web-react/icon";
 import { Launch } from "./api";
 import LaunchDetail from "./LaunchDetail";
 
@@ -18,23 +19,40 @@ const LaunchItem = ({ launch }: Props) => {
         hoverable
         cover={
           <div style={{ overflow: "hidden" }}>
-            <img
-              style={{ width: "100%", transform: "translateY(-20px)" }}
-              alt="dessert"
-              src={launch.img}
-            />
+            <img style={{ width: "100%" }} alt="dessert" src={launch.img} />
           </div>
         }
         actions={[
-          <Button type="text" size="large" onClick={() => setDetailVisible(true)}>
+          <Button
+            type="outline"
+            size="large"
+            style={{ padding: "0 10px" }}
+            icon={<IconInfoCircle />}
+            onClick={() => setDetailVisible(true)}
+          >
             Detail
           </Button>,
-          <Button type="text" size="large">
+          <Button
+            type="primary"
+            size="large"
+            style={{ padding: "0 10px" }}
+            icon={<IconSend />}
+            onClick={() => {
+              Message.info("Launch Success!");
+            }}
+          >
             Launch
           </Button>,
         ]}
       >
-        <Meta title={launch.name} description={<>{launch.title}</>} />
+        <Meta
+          title={
+            <>
+              <span style={{ fontWeight: "bold" }}>{launch.name}</span>
+            </>
+          }
+          description={<>{launch.title}</>}
+        />
       </Card>
       <LaunchDetail
         visible={detailVisible}
