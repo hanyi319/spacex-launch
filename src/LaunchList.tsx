@@ -1,15 +1,15 @@
-import { Launch } from "./api";
 import LaunchItem from "./LaunchItem";
+import { Launch } from "./api";
 import "./LaunchList.css";
 
 interface Props {
-  launches: Launch[];
+  launchList: Launch[];
 }
 
-const LaunchList = ({ launches }: Props) => {
+const LaunchList = ({ launchList }: Props) => {
   return (
     <div className="list-container">
-      {launches.map((launch: Launch) => (
+      {launchList.map((launch: Launch) => (
         <div className="item-container">
           <LaunchItem key={launch.id} launch={launch} />
         </div>

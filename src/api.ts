@@ -3,4 +3,5 @@ export interface Launch {
   name: string;
   title: string;
   img: string;
+  detail: string;
 }

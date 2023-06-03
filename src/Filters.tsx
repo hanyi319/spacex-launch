@@ -1,4 +1,4 @@
-import { Space, Input, DatePicker, Select, Button, Switch } from "@arco-design/web-react";
+import { Space, Input, DatePicker, Select, Button } from "@arco-design/web-react";
 import "./Filters.css";
 
 const Option = Select.Option;

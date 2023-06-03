@@ -27,10 +27,10 @@ const LaunchItem = ({ launch }: Props) => {
         }
         actions={[
           <Button type="text" size="large" onClick={() => setDetailVisible(true)}>
-            详情
+            Detail
           </Button>,
           <Button type="text" size="large">
-            发射
+            Launch
           </Button>,
         ]}
       >
