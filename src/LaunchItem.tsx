@@ -22,7 +22,7 @@ const LaunchItem = ({ launch }: Props) => {
       }
       actions={[
         <Button type="text" size="large">
-          Launch
+          发射
         </Button>,
       ]}
     >
