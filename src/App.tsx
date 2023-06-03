@@ -3,6 +3,15 @@ import LaunchList from "./LaunchList";
 import { launchList } from "./mock";
 import "./App.css";
 import spacexLogo from "./assets/spacex.svg";
+import { getAllLaunches } from "./api";
+
+const getLaunchList = async () => {
+  await getAllLaunches({}).then((res) => {
+    console.log(res.data);
+  });
+};
+
+getLaunchList();
 
 function App() {
   return (
