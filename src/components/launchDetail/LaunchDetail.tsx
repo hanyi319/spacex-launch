@@ -14,6 +14,7 @@ const LaunchDetail = ({ visible, onClose, launch }: Props) => (
     onCancel={onClose}
     autoFocus={false}
     focusLock={true}
+    style={{ maxWidth: "80%", margin: "16px auto" }}
     footer={
       <>
         <Button type="text" onClick={onClose}>

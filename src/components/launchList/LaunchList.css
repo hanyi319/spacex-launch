@@ -1,12 +1,25 @@
 .list-container {
-  width: 60%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 60%;
 }
 
 .item-container {
   width: calc(50% - 32px);
   max-width: 500px;
   margin-bottom: 32px;
+}
+
+@media (max-width: 500px) {
+  .list-container {
+    flex-direction: column;
+    width: 80%;
+    margin-top: 32px;
+  }
+
+  .item-container {
+    width: 100%;
+    margin-bottom: 32px;
+  }
 }
