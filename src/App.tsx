@@ -1,9 +1,9 @@
-import Filters from "./Filters";
-import LaunchList from "./LaunchList";
-import { launchList } from "./mock";
+import Filters from "./components/Filters/Filters";
+import LaunchList from "./components/launchList/LaunchList";
+import { launchList } from "./api/mock";
 import "./App.css";
 import spacexLogo from "./assets/spacex.svg";
-import { getAllLaunches } from "./api";
+import { getAllLaunches } from "./api/api";
 
 const getLaunchList = async () => {
   await getAllLaunches({}).then((res) => {

@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Card, Message } from "@arco-design/web-react";
 import { IconInfoCircle, IconSend } from "@arco-design/web-react/icon";
-import { Launch } from "./api";
-import LaunchDetail from "./LaunchDetail";
+import { Launch } from "../../api/api";
+import LaunchDetail from "../launchDetail/LaunchDetail";
 
 interface Props {
   launch: Launch;

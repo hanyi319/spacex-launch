@@ -1,5 +1,5 @@
 import { Button, Modal } from "@arco-design/web-react";
-import { Launch } from "./api";
+import { Launch } from "../../api/api";
 
 interface Props {
   visible: boolean;

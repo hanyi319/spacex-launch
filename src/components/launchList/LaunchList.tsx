@@ -1,5 +1,5 @@
-import LaunchItem from "./LaunchItem";
-import { Launch } from "./api";
+import LaunchItem from "../launchItem/LaunchItem";
+import { Launch } from "../../api/api";
 import "./LaunchList.css";
 
 interface Props {
