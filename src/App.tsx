@@ -8,14 +8,14 @@ import "./App.css";
 function App() {
   const [launchList, setLaunchList] = useState<Launch[]>([]); // 用于显示列表
   const [launchesData, setLaunchesData] = useState<Launch[]>([]); // 用于存储从接口返回的数据
-  const [loading, setLoading] = useState(false); // 缓冲状态
-  const [page, setPage] = useState(1); // 分页信息
+  // const [loading, setLoading] = useState(false); // 缓冲状态
+  // const [page, setPage] = useState(1); // 分页信息
 
   const loadLaunches = async () => {
-    setLoading(true);
+    // setLoading(true);
     const res = await getAllLaunches({});
     setLaunchesData(res.data);
-    setLoading(false);
+    // setLoading(false);
   };
 
   const handleLoadMore = () => {

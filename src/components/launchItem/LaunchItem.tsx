@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Card, Message } from "@arco-design/web-react";
-import { IconInfoCircle, IconSend } from "@arco-design/web-react/icon";
+import { Button, Card } from "@arco-design/web-react";
+import { IconInfoCircle } from "@arco-design/web-react/icon";
 import { Launch } from "../../api/api";
 import LaunchDetail from "../launchDetail/LaunchDetail";
 
@@ -37,18 +37,7 @@ const LaunchItem = ({ launch }: Props) => {
             icon={<IconInfoCircle />}
             onClick={() => setDetailVisible(true)}
           >
-            Detail
-          </Button>,
-          <Button
-            type="primary"
-            size="large"
-            style={{ padding: "0 10px" }}
-            icon={<IconSend />}
-            onClick={() => {
-              Message.info("Launch Success!");
-            }}
-          >
-            Launch
+            Learn More
           </Button>,
         ]}
       >
