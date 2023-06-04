@@ -19,7 +19,14 @@ const LaunchItem = ({ launch }: Props) => {
         hoverable
         cover={
           <div style={{ overflow: "hidden" }}>
-            <img style={{ width: "100%" }} alt="dessert" src={launch.img} />
+            <img
+              style={{ width: "100%" }}
+              alt="no img"
+              src={
+                launch.links.flickr.original[0] ||
+                "https://sxcontent9668.azureedge.us/cms-assets/assets/CRS_28_vertical_060223_DSC_2206_desktop_bc8f8c3019.jpg"
+              }
+            />
           </div>
         }
         actions={[
@@ -51,7 +58,7 @@ const LaunchItem = ({ launch }: Props) => {
               <span style={{ fontWeight: "bold" }}>{launch.name}</span>
             </>
           }
-          description={<>{launch.title}</>}
+          description={<>{new Date(launch.date_local).toLocaleString()}</>}
         />
       </Card>
       <LaunchDetail

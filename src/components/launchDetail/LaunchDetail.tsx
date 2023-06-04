@@ -22,8 +22,15 @@ const LaunchDetail = ({ visible, onClose, launch }: Props) => (
       </>
     }
   >
-    <img style={{ width: "100%" }} alt="dessert" src={launch.img} />
-    <p>{launch.detail}</p>
+    <img
+      style={{ width: "100%" }}
+      alt="no img"
+      src={
+        launch.links.flickr.original[0] ||
+        "https://sxcontent9668.azureedge.us/cms-assets/assets/CRS_28_vertical_060223_DSC_2206_desktop_bc8f8c3019.jpg"
+      }
+    />
+    <p>{launch.details || "no more information"}</p>
   </Modal>
 );
 

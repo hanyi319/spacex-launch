@@ -3,9 +3,9 @@ import axios from "axios";
 export interface Launch {
   id: number;
   name: string;
-  title: string;
-  img: string;
-  detail: string;
+  date_local: string;
+  links: any;
+  details: string;
 }
 
 // 获取所有发射项目
